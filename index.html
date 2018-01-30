@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>JS Callback</title>
     <style>
         #green {
             background-color: green;
@@ -14,10 +14,76 @@
             background-color: red;
             color: yellow;
         }
+        #tickle {
+            background-color: blue;
+            color: yellow;
+        }
+        .center {
+            text-align: center;
+            padding: 50 auto;
+        }
+        button {
+            height: 50px;
+            width: 150px;
+        }
     </style>
 </head>
 <body>
-    <button id="green">green</button>
-    <button id="dice">dice</button>
+    <div class="center">
+        <button id="green">green</button>
+        <button id="dice">dice</button>
+        <button id="tickle">tickle me</button>
+    </div>
+    <div class="diceOutput"></div>
+        
+        <script>
+        
+            function heehee() {
+                    console.log('hee hee hee hee');
+                }
+
+            var tickleBtn = document.querySelector('#tickle');
+            tickleBtn.addEventListener('click', heehee);
+
+            function rollDice() {
+                number = Math.floor(Math.random() * (6)) + 1;
+                console.log(number);
+                diceOutput.innerText = number;
+            }
+
+            var diceBtn = document.querySelector('#dice');
+            var diceOutput = document.querySelector('diceOutput');
+
+            function randomInt(num) {
+                return Math.floor(Math.random() * num)
+            }
+
+            function
+
+            diceBtn.addEventListener('click', rollDice);
+
+            function hulk() {
+                document.body.style.background = 'green';
+            }
+            
+            var greenBtn = document.querySelector('#green');
+            greenBtn.addEventListener('click', hulk);
+
+
+
+
+
+        //     var diceBtn = document.querySelector('#dice-btn')
+        // var diceOutput = document.querySelector('#dice-output')
+        // function randomInt(n){
+        //     return Math.floor(Math.random() * n)
+        // }
+        // function rollIt(){
+        //     diceOutput.innerText = randomInt(6)
+        // }
+        // diceBtn.addEventListener('click', rollIt)
+        
+        </script>
+    </div>
 </body>
 </html>
